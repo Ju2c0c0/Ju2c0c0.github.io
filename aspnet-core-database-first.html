@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ASP.NET Core Database First | Ju2c0c0&#39;s blog</title>
+    <meta name="description" content="A blog about everything and nothing">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.fba42894.css" as="style"><link rel="preload" href="/assets/js/app.19971a27.js" as="script"><link rel="preload" href="/assets/js/3.194a48c2.js" as="script"><link rel="prefetch" href="/assets/js/1.655c6906.js"><link rel="prefetch" href="/assets/js/2.7a309e13.js"><link rel="prefetch" href="/assets/js/4.e66bf38f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fba42894.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      Ju2c0c0's blog
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar-mask"></div><div class="sidebar"><!----><!----></div><div class="page"><div class="content"><h1 id="asp-net-core-database-first"><a href="#asp-net-core-database-first" aria-hidden="true" class="header-anchor">#</a> ASP.NET Core Database First</h1><h2 id="use-entity-framework-to-generate-models"><a href="#use-entity-framework-to-generate-models" aria-hidden="true" class="header-anchor">#</a> Use Entity Framework to generate models</h2><h3 id="exemple"><a href="#exemple" aria-hidden="true" class="header-anchor">#</a> Exemple</h3><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token variable">$connectionstring</span> = <span class="token string">'server=(localdb)\mssqllocaldb;database=MyDatabase;integrated security=true;'</span>
+<span class="token variable">$provider</span> = <span class="token string">'Microsoft.EntityFrameworkCore.SqlServer'</span>
+dotnet ef dbcontext scaffold <span class="token variable">$connectionstring</span> <span class="token variable">$provider</span> <span class="token operator">-</span>d <span class="token operator">-</span>o Models <span class="token operator">-</span>c MyDatabaseContext
+</code></pre></div><h3 id="getting-help"><a href="#getting-help" aria-hidden="true" class="header-anchor">#</a> Getting help</h3><div class="language-powershell extra-class"><pre class="language-powershell"><code>dotnet ef dbcontext scaffold <span class="token operator">-</span>h
+</code></pre></div><h3 id="notes"><a href="#notes" aria-hidden="true" class="header-anchor">#</a> Notes</h3><ul><li>The folder specified by the <code>-o</code> option will be created if it does not exist.</li><li>By default the context will be named after the name of the database to scaffold. Use the <code>-c</code> option to specify a name.</li></ul></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/assets/js/3.194a48c2.js" defer></script><script src="/assets/js/app.19971a27.js" defer></script>
+  </body>
+</html>
